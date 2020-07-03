@@ -1,11 +1,13 @@
 package physique;
 
+import java.util.Random;
+
 public class Direction {
     public final int HAUT = 0;
     public final int BAS = 1;
     public final int GAUCHE = 2;
     public final int DROITE = 3;
-    public int random;
+    public Random random = new Random();
 
     public int directionOpposee(int direction) {
         switch (direction) {
@@ -48,6 +50,6 @@ public class Direction {
     }
 
     public int obtenirDirAlea() {
-        return -1;
+        return random.nextInt(4);
     }
 }
